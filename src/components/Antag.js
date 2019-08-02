@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Antag extends Component {
-
-  render() {
-    return (
-      <div>
-        { this.props.antag.name }
-      </div>
-    );
-  }
-
+const Antag = ({ antag }) => {
+  return (
+    <div>
+      { antag.name }
+    </div>
+  );
 }
 
 export default Antag;

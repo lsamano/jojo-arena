@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Protag from '../components/Protag';
 import { Container } from 'semantic-ui-react';
 
-class ProtagContainer extends Component {
+const ProtagContainer = ({ protags, chooseProtag }) => {
+  const protagComponents = () => (
+    protags.map(protag => (
+      <Protag key={protag.id} protag={protag} chooseProtag={chooseProtag}/>)
+      )
+  )
 
-  render() {
-    const protagComponents = this.props.protags.map(protag => {
-      return <Protag key={protag.id} protag={protag} chooseProtag={this.props.chooseProtag}/>
-    })
-    return (
-      <Container>
-        <h1>Protagonists</h1>
-        { protagComponents }
-      </Container>
-    );
-  }
-
+  return (
+    <Container>
+      <h1>Protagonists</h1>
+      { protagComponents() }
+    </Container>
+  );
 }
 
 export default ProtagContainer;

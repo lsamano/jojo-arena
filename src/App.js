@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProtagContainer from './containers/ProtagContainer';
 import AntagContainer from './containers/AntagContainer';
 import Arena from './containers/Arena';
-import ScoreBoard from './containers/ScoreBoard';
+import ScoreBoard from './components/ScoreBoard';
 import { Container, Grid } from 'semantic-ui-react'
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data")
+    fetch("http://localhost:3000/jojo")
     .then(res => res.json())
     .then(data => this.setState({
       protags: data.protags,

@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Protag extends Component {
-  render() {
-    return (
-      <div onClick={() => this.props.chooseProtag(this.props.protag)}>
-        { this.props.protag.name }
-      </div>
-    );
-  }
-
+const Protag = ({ protag, chooseProtag }) => {
+  return (
+    <div onClick={ () => chooseProtag(protag) }>
+      { protag.name }
+    </div>
+  );
 }
 
 export default Protag;
