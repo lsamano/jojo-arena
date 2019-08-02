@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JoJo's Bizarre Arena
+## Introduction
+This lab will test your mastery of props, state, reusable components, inverse data flow, and conditional rendering.
 
-## Available Scripts
+## Setting
+Oh no! The Hitman Team of the Passione Mafia is out to capture Trish Una! It's up to Team Bucciarati to defeat them.
 
-In the project directory, you can run:
+**Disclaimer:** This lab is best enjoyed if you are a fan of JoJo's Bizarre Adventure, a long-running anime/manga series by Hirohiko Araki.
 
-### `npm start`
+## Setup
+We've provided a db.json file, so run `json-server db.json --watch` as well as `yarn && yarn start`.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deliverables
+### Step 1: Render the Index
+- Render each Protagonist card in the Protagonist container
+    - Each card contains the Protagonist's name
+- Render each Antagonist card in the Antagonist container
+    - Each card contains the Antagonist's name
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Step 2: Show Pages
+- When a Protagonist is clicked, they should be rendered in the Arena
+- On page load, an Antagonist should be chosen at random and rendered in the Arena
+- Arena fighters should have their name, stand name, and image rendered
 
-### `npm test`
+### Step 3: Deleting
+- When the fight button is clicked, the winner is chosen at random
+    - The losing fighter should be removed from the Arena
+    - The losing fighter should be removed from their respective container
+    - The winning fighter's name should be written on the ScoreBoard
+    - The winning team should receive one point and have it rendered on the ScoreBoard
+    - If an Antagonist lost, a new Antagonist should be chosen at random and take their place in the Arena, unless there are no more Antagonists left
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 4: Conditional Rendering
+- The fight button should be disabled if there is no chosen Protagonist
+- When one side has no more fighters remaining,
+    - The winning side should be announced on the ScoreBoard.
+    - The fight button should be disabled
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Some Hints
+- This will randomly return 0 or 1: `Math.floor(Math.random() * 2)`
+- Given an array, this will randomly return an element in that array: `array[Math.floor( Math.random() * array.length )]`
+- We've implemented Semantic UI React to help with the styling. You can mostly ignore them, except for the provided Button component. It functions similarly to the html `<button>` and can accept an onClick prop and disabled prop.
+    - If you wish to disable the Semantic UI Button, you can pass it a prop of disabled as either true or false. For example, `<Button onClick={this.callback} disabled={true}>` will produce a disabled button -  even if clicked, it will not run the onClick callback.
