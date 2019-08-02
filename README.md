@@ -1,4 +1,6 @@
 # JoJo's Bizarre Arena
+![](demo.gif)
+
 ## Introduction
 This lab will test your mastery of props, state, reusable components, inverse data flow, and conditional rendering.
 
@@ -11,11 +13,12 @@ Oh no! The Hitman Team of the Passione Mafia is out to capture Trish Una! It's u
 We've provided a db.json file, so run `json-server db.json --watch` as well as `yarn && yarn start`.
 
 ## Deliverables
+It is recommended that you work systematically and in order.
 ### Step 1: Render the Index
 - Render each Protagonist card in the Protagonist container
-    - Each card contains the Protagonist's name
+    - Each card contains their name
 - Render each Antagonist card in the Antagonist container
-    - Each card contains the Antagonist's name
+    - Each card contains their name
 
 ### Step 2: Show Pages
 - When a Protagonist is clicked, they should be rendered in the Arena
@@ -32,8 +35,8 @@ We've provided a db.json file, so run `json-server db.json --watch` as well as `
 
 ### Step 4: Conditional Rendering
 - The fight button should be disabled if there is no chosen Protagonist
-- When one side has no more fighters remaining,
-    - The winning side should be announced on the ScoreBoard.
+- When one side has no more fighters remaining (the winning team has 7 points),
+    - The winning side should be announced on the ScoreBoard
     - The fight button should be disabled
 
 ## Some Hints
