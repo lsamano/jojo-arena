@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Antag = ({ antag }) => {
+const Antag = props => {
   return (
     <div>
-      { antag.name }
+      {/* Render their name here */}
     </div>
   );
 }

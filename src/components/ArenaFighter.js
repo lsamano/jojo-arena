@@ -1,15 +1,13 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 
-const ArenaFighter = ({ fighter }) => {
-  const { name, stand, image } = fighter
-
+const ArenaFighter = props => {
   return (
     <Grid.Column>
     <h3>
-    { name && `${name} & ${stand}` }
+    { /* Render the fighter's name and stand name */ }
     </h3>
-    <Image src={image} centered/>
+    <Image src={null /* Replace null with the fighter's image url */} centered/>
     </Grid.Column>
   );
 }

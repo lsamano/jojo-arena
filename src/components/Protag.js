@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Protag = ({ protag, chooseProtag }) => {
+const Protag = props => {
   return (
-    <div onClick={ () => chooseProtag(protag) }>
-      { protag.name }
+    <div onClick={null /* Replace null with a callback */ }>
+      {/* Render their name here */}
     </div>
   );
 }

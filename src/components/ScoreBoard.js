@@ -1,21 +1,13 @@
 import React from 'react';
 import { Container, Message } from 'semantic-ui-react';
 
-const ScoreBoard = ({ winner, protagScore, antagScore }) => {
+const ScoreBoard = props => {
   return (
     <Container text textAlign='center'>
-      <p>Winner: {winner}</p>
-      <p>Score: {protagScore} - {antagScore}</p>
+      <p>Winner: {/* Latest Winning Fighter */}</p>
+      <p>Score: {/* Protagonists Score */} - {/* Antagonists Score */}</p>
       {
-        protagScore === 7 ?
-        <Message success>
-          <p>Protagonists Wins!</p>
-        </Message> :
-        antagScore === 7 ?
-        <Message negative>
-          <p>Antagonists Wins!</p>
-        </Message> :
-        null
+        /* Conditionally render a Message when one side wins */
       }
     </Container>
   );

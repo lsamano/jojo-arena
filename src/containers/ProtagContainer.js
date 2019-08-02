@@ -2,17 +2,12 @@ import React from 'react';
 import Protag from '../components/Protag';
 import { Container } from 'semantic-ui-react';
 
-const ProtagContainer = ({ protags, chooseProtag }) => {
-  const protagComponents = () => (
-    protags.map(protag => (
-      <Protag key={protag.id} protag={protag} chooseProtag={chooseProtag}/>)
-      )
-  )
+const ProtagContainer = props => {
 
   return (
     <Container>
       <h1>Protagonists</h1>
-      { protagComponents() }
+      {/* Render each protagonist as a Protag Component */}
     </Container>
   );
 }
