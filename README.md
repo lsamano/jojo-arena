@@ -44,3 +44,13 @@ It is recommended that you work systematically and in order.
 - Given an array, this will randomly return an element in that array: `array[Math.floor( Math.random() * array.length )]`
 - We've implemented Semantic UI React to help with the styling. You can mostly ignore them, except for the provided Button component. It functions similarly to the html `<button>` and can accept an onClick prop and disabled prop.
     - If you wish to disable the Semantic UI Button, you can pass it a prop of disabled as either true or false. For example, `<Button onClick={this.callback} disabled={true}>` will produce a disabled button -  even if clicked, it will not run the onClick callback.
+- Semantic UI Message Component:
+```js
+<Message success>
+  <p>Protagonists Wins!</p>
+</Message>
+
+<Message negative>
+  <p>Antagonists Wins!</p>
+</Message>
+```
