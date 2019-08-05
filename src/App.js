@@ -4,6 +4,7 @@ import AntagContainer from './containers/AntagContainer';
 import Arena from './containers/Arena';
 import ScoreBoard from './components/ScoreBoard';
 import { Container, Grid } from 'semantic-ui-react'
+// import './App.css';
 
 class App extends Component {
   state = {
@@ -62,36 +63,37 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className='full-height'>
         <Grid celled='internally'>
-          <Grid.Row>
-            <Grid.Column width={4}>
+          <Grid.Row className='full-height'>
+            <Grid.Column width={4} color='black'>
               <ProtagContainer
               protags={this.state.protags}
               chooseProtag={this.chooseProtag} />
             </Grid.Column>
 
             <Grid.Column width={8}>
-            <Arena
-              chosenProtag={this.state.chosenProtag}
-              chosenAntag={this.state.chosenAntag}
-              doBattle={this.doBattle}  />
+              <Grid.Row>
+                <Arena
+                  chosenProtag={this.state.chosenProtag}
+                  chosenAntag={this.state.chosenAntag}
+                  doBattle={this.doBattle}  />
+              </Grid.Row>
+
+              <Grid.Row>
+                <ScoreBoard
+                  winner={this.state.latestWinner}
+                  protagScore={this.state.protagScore}
+                  antagScore={this.state.antagScore} />
+              </Grid.Row>
             </Grid.Column>
 
-            <Grid.Column width={4}>
+            <Grid.Column width={4} color='black'>
             <AntagContainer
               antags={this.state.antags} />
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row>
-            <Grid.Column>
-              <ScoreBoard
-                winner={this.state.latestWinner}
-                protagScore={this.state.protagScore}
-                antagScore={this.state.antagScore} />
-            </Grid.Column>
-          </Grid.Row>
         </Grid>
       </Container>
     );
