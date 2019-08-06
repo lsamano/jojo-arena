@@ -3,10 +3,10 @@ import { Container, Message, Grid } from 'semantic-ui-react';
 
 const ScoreBoard = ({ winner, protagScore, antagScore }) => {
   return (
-    <Grid>
-      <Grid.Row>
+    <Grid centered>
+      <Grid.Row columns={1}>
         <Grid.Column>
-          <Container text textAlign='center'>
+          <Container textAlign='center' verticalAlign='bottom'>
             <p>Winner: {winner}</p>
             <p>Score: {protagScore} - {antagScore}</p>
             {

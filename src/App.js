@@ -66,7 +66,7 @@ class App extends Component {
       <Container className='full-height'>
         <Grid celled='internally'>
           <Grid.Row className='full-height'>
-            <Grid.Column width={4} color='black'>
+            <Grid.Column width={4} >
               <ProtagContainer
               protags={this.state.protags}
               chooseProtag={this.chooseProtag} />
@@ -88,7 +88,7 @@ class App extends Component {
               </Grid.Row>
             </Grid.Column>
 
-            <Grid.Column width={4} color='black'>
+            <Grid.Column width={4} >
             <AntagContainer
               antags={this.state.antags} />
             </Grid.Column>

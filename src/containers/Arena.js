@@ -8,7 +8,7 @@ const Arena = ({ chosenProtag, chosenAntag, doBattle }) => {
 
   return (
     <Grid centered>
-      <Grid.Row column={1}>
+      <Grid.Row columns={1}>
         <Grid.Column>
           <Container>
             <Header as='h1' textAlign='center'>
