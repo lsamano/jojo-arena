@@ -63,7 +63,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container className='full-height'>
+      <>
         <Grid celled='internally'>
           <Grid.Row className='full-height'>
             <Grid.Column width={4} >
@@ -73,14 +73,14 @@ class App extends Component {
             </Grid.Column>
 
             <Grid.Column width={8}>
-              <Grid.Row>
+              <Grid.Row style={{height: '70%'}}>
                 <Arena
                   chosenProtag={this.state.chosenProtag}
                   chosenAntag={this.state.chosenAntag}
                   doBattle={this.doBattle}  />
               </Grid.Row>
 
-              <Grid.Row>
+              <Grid.Row style={{height: '30%'}}>
                 <ScoreBoard
                   winner={this.state.latestWinner}
                   protagScore={this.state.protagScore}
@@ -95,7 +95,7 @@ class App extends Component {
           </Grid.Row>
 
         </Grid>
-      </Container>
+      </>
     );
   }
 

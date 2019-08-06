@@ -1,13 +1,16 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
+import { Image, Header } from 'semantic-ui-react';
 
 const Antag = ({ antag }) => {
   return (
-    <div>
-      <Image src={antag.avatar} alt='' avatar size='tiny'/>
-      { antag.name }
+    <div style={{padding: '15px'}} >
+
+      <Header as='h3'>
+        <Image src={antag.avatar} alt='' avatar size='huge'/>
+        { antag.name }
+      </Header>
     </div>
-  );
+  )
 }
 
 export default Antag;

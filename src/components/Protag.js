@@ -3,10 +3,13 @@ import { Image, Header } from 'semantic-ui-react';
 
 const Protag = ({ protag, chooseProtag }) => {
   return (
-    <Header as='h3' onClick={ () => chooseProtag(protag) } >
-      <Image src={protag.avatar} alt='' avatar size='huge'/>
-      { protag.name }
-    </Header>
+    <div onClick={ () => chooseProtag(protag) } style={{padding: '15px'}} >
+
+      <Header as='h3'>
+        <Image src={protag.avatar} alt='' avatar size='huge'/>
+        { protag.name }
+      </Header>
+    </div>
   );
 }
 

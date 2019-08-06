@@ -1,6 +1,6 @@
 import React from 'react';
 import Antag from '../components/Antag';
-import { Container } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 const AntagContainer = ({ antags }) => {
 
@@ -11,7 +11,7 @@ const AntagContainer = ({ antags }) => {
 
   return (
     <Container>
-      <h1>Antagonists</h1>
+      <Header as='h1' textAlign='center'>Antagonists</Header>
       { antagComponents() }
     </Container>
   );

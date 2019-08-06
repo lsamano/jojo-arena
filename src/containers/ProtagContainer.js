@@ -1,6 +1,6 @@
 import React from 'react';
 import Protag from '../components/Protag';
-import { Container } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 const ProtagContainer = ({ protags, chooseProtag }) => {
   const protagComponents = () => (
@@ -11,7 +11,7 @@ const ProtagContainer = ({ protags, chooseProtag }) => {
 
   return (
     <Container>
-      <h1>Protagonists</h1>
+      <Header as='h1' textAlign='center'>Protagonists</Header>
       { protagComponents() }
     </Container>
   );
