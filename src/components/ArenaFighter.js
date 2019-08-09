@@ -6,7 +6,7 @@ const ArenaFighter = ({ fighter }) => {
 
   return (
     <Grid.Column>
-    <Header as='h2' textAlign='center'>
+    <Header as='h1' textAlign='center'>
     { name }
     <Header.Subheader>{ stand }</Header.Subheader>
     </Header>

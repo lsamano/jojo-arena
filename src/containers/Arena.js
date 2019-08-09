@@ -12,13 +12,13 @@ const Arena = ({ chosenProtag, chosenAntag, doBattle }) => {
         <Grid.Column>
           <Container>
             <Header as='h1' textAlign='center'>
-              Arena
+              ARENA
             </Header>
             <Button
               color='purple'
               onClick={doBattle}
               fluid
-              disabled={!pName || !aName}>
+              disabled={!pName || !aName} size='huge'>
               Fight!
             </Button>
           </Container>

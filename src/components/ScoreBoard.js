@@ -6,17 +6,17 @@ const ScoreBoard = ({ winner, protagScore, antagScore }) => {
     <Grid centered>
       <Grid.Row columns={1}>
         <Grid.Column>
-          <Container textAlign='center' verticalAlign='bottom'>
+          <Container textAlign='center' style={{backgroundColor: 'ghostWhite', padding: '20px'}}>
             <p>Winner: {winner}</p>
             <p>Score: {protagScore} - {antagScore}</p>
             {
               protagScore === 7 ?
               <Message success>
-                <p>Protagonists Wins!</p>
+                <p>Protagonists Win!</p>
               </Message> :
               antagScore === 7 ?
               <Message negative>
-                <p>Antagonists Wins!</p>
+                <p>Antagonists Win!</p>
               </Message> :
               null
             }

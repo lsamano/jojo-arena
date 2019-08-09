@@ -3,8 +3,7 @@ import ProtagContainer from './containers/ProtagContainer';
 import AntagContainer from './containers/AntagContainer';
 import Arena from './containers/Arena';
 import ScoreBoard from './components/ScoreBoard';
-import { Container, Grid } from 'semantic-ui-react'
-// import './App.css';
+import { Grid } from 'semantic-ui-react'
 
 class App extends Component {
   state = {
@@ -63,15 +62,16 @@ class App extends Component {
 
   render() {
     return (
-      <>
         <Grid celled='internally'>
           <Grid.Row className='full-height'>
-            <Grid.Column width={4} >
+            {/* Left Column */}
+            <Grid.Column width={4}>
               <ProtagContainer
               protags={this.state.protags}
               chooseProtag={this.chooseProtag} />
             </Grid.Column>
 
+            {/* Middle Column */}
             <Grid.Column width={8}>
               <Grid.Row style={{height: '70%'}}>
                 <Arena
@@ -88,14 +88,13 @@ class App extends Component {
               </Grid.Row>
             </Grid.Column>
 
+            {/* Right Column */}
             <Grid.Column width={4} >
             <AntagContainer
               antags={this.state.antags} />
             </Grid.Column>
           </Grid.Row>
-
         </Grid>
-      </>
     );
   }
 
