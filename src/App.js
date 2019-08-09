@@ -3,7 +3,7 @@ import ProtagContainer from './containers/ProtagContainer';
 import AntagContainer from './containers/AntagContainer';
 import Arena from './containers/Arena';
 import ScoreBoard from './components/ScoreBoard';
-import { Grid } from 'semantic-ui-react'
+import { Grid, Container, Button, Header } from 'semantic-ui-react'
 
 class App extends Component {
   state = {
@@ -62,39 +62,53 @@ class App extends Component {
 
   render() {
     return (
-        <Grid celled='internally'>
-          <Grid.Row className='full-height'>
-            {/* Left Column */}
-            <Grid.Column width={4}>
-              <ProtagContainer
-              protags={this.state.protags}
-              chooseProtag={this.chooseProtag} />
-            </Grid.Column>
+      <Grid celled='internally' className='full-height'>
 
-            {/* Middle Column */}
-            <Grid.Column width={8}>
-              <Grid.Row style={{height: '70%'}}>
-                <Arena
-                  chosenProtag={this.state.chosenProtag}
-                  chosenAntag={this.state.chosenAntag}
-                  doBattle={this.doBattle}  />
-              </Grid.Row>
+        {/* Left Column */}
+        <Grid.Column width={4}>
+          <ProtagContainer
+            protags={this.state.protags}
+            chooseProtag={this.chooseProtag} />
+        </Grid.Column>
 
-              <Grid.Row style={{height: '30%'}}>
-                <ScoreBoard
-                  winner={this.state.latestWinner}
-                  protagScore={this.state.protagScore}
-                  antagScore={this.state.antagScore} />
-              </Grid.Row>
-            </Grid.Column>
-
-            {/* Right Column */}
-            <Grid.Column width={4} >
-            <AntagContainer
-              antags={this.state.antags} />
-            </Grid.Column>
+        {/* Middle Column, has 3 Rows */}
+        <Grid.Column width={8}>
+          <Grid.Row style={{height: '18%'}}>
+            <Container>
+              <Header as='h1' textAlign='center'>
+                ARENA
+              </Header>
+              <Button
+                color='purple'
+                onClick={this.doBattle}
+                fluid
+                disabled={!this.state.chosenProtag.name || !this.state.chosenAntag.name}
+                size='huge'>
+                Fight!
+              </Button>
+            </Container>
           </Grid.Row>
-        </Grid>
+          <Grid.Row style={{height: '57%'}}>
+            <Arena
+              chosenProtag={this.state.chosenProtag}
+              chosenAntag={this.state.chosenAntag} />
+          </Grid.Row>
+
+          <Grid.Row style={{height: '25%'}}>
+            <ScoreBoard
+              winner={this.state.latestWinner}
+              protagScore={this.state.protagScore}
+              antagScore={this.state.antagScore} />
+          </Grid.Row>
+        </Grid.Column>
+
+        {/* Right Column */}
+        <Grid.Column width={4} >
+          <AntagContainer
+            antags={this.state.antags} />
+        </Grid.Column>
+
+      </Grid>
     );
   }
 
