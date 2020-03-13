@@ -1,9 +1,14 @@
 import React from 'react';
+import { Image, Header } from 'semantic-ui-react';
 
-const Protag = props => {
+const Protag = ({ protag, chooseProtag }) => {
   return (
-    <div onClick={null /* Replace null with a callback */ }>
-      {/* Render their name here */}
+    <div onClick={ () => chooseProtag(protag) } style={{padding: '15px'}} >
+
+      <Header as='h3'>
+        <Image src={protag.avatar} alt='' avatar size='huge'/>
+        { protag.name }
+      </Header>
     </div>
   );
 }

@@ -1,13 +1,18 @@
 import React from 'react';
 import Antag from '../components/Antag';
-import { Container } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
-const AntagContainer = props => {
-  
+const AntagContainer = ({ antags }) => {
+
+
+  const antagComponents = () => (
+    antags.map(antag => <Antag key={antag.id} antag={antag} />)
+  )
+
   return (
     <Container>
-      <h1>Antagonists</h1>
-      {/* Render each antagonist as an Antag Component */}
+      <Header as='h1' textAlign='center'>Antagonists</Header>
+      { antagComponents() }
     </Container>
   );
 }

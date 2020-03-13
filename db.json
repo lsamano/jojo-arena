@@ -4,44 +4,51 @@
       {
         "id": 1,
         "name": "Bruno Bucciarati",
-        "stand": "Zipper Man",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/e/ee/BrunoCharacterArt.png/revision/latest?cb=20181011054645"
+        "stand": "Sticky Fingers",
+        "avatar": "/images/bucciarati-avatar.png",
+        "image": "/images/bucciarati.png"
       },
       {
         "id": 2,
         "name": "Giorno Giovanna",
         "stand": "Gold Experience",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/4/4e/GiornoCharacterArt.png/revision/latest?cb=20181011054602"
+        "avatar": "/images/giorno-avatar.png",
+        "image": "/images/giorno.png"
       },
       {
         "id": 3,
         "name": "Trish Una",
         "stand": "Spice Girl",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/6/68/Trish_Una_character_art.png/revision/latest?cb=20181203034714"
+        "avatar": "/images/trish-avatar.png",
+        "image": "/images/trish.png"
       },
       {
         "id": 4,
         "name": "Guido Mista",
         "stand": "Six Pistols",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/a/a9/MistaCharacterArt.png/revision/latest?cb=20181011055155"
+        "avatar": "/images/mista-avatar.png",
+        "image": "/images/mista.png"
       },
       {
         "id": 5,
         "name": "Leone Abbacchio",
         "stand": "Moody Blues",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/e/ed/AbbacchioCharacterArt.png/revision/latest?cb=20181011055014"
+        "avatar": "/images/abbacchio-avatar.png",
+        "image": "/images/abbacchio.png"
       },
       {
         "id": 6,
         "name": "Narancia Ghirga",
         "stand": "Aerosmith",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/e/ea/NaranciaCharacterArt.png/revision/latest?cb=20181011055122"
+        "avatar": "/images/narancia-avatar.png",
+        "image": "/images/narancia.png"
       },
       {
         "id": 7,
         "name": "Pannacotta Fugo",
         "stand": "Purple Haze",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/3/32/FugoCharacterArt.png/revision/latest?cb=20181011054938"
+        "avatar": "/images/fugo-avatar.png",
+        "image": "/images/fugo.png"
       }
     ],
     "antags": [
@@ -49,43 +56,50 @@
         "id": 1,
         "name": "Risotto Nero",
         "stand": "Metallica",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/9/9f/Anime_Risotto_Nero.png/revision/latest?cb=20181210031634"
+        "avatar": "/images/risotto-avatar.png",
+        "image": "/images/risotto.png"
       },
       {
         "id": 2,
         "name": "Ghiaccio",
         "stand": "White Album",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/4/4f/Anime_Ghiaccio.png/revision/latest?cb=20181210031555"
+        "avatar": "/images/ghiaccio-avatar.png",
+        "image": "/images/ghiaccio.png"
       },
       {
         "id": 3,
         "name": "Prosciutto",
         "stand": "The Grateful Dead",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/2/24/Prosciutto_anime.png/revision/latest?cb=20181210031044"
+        "avatar": "/images/prosciutto-avatar.png",
+        "image": "/images/prosciutto.png"
       },
       {
         "id": 4,
         "name": "Illuso",
         "stand": "Man in the Mirror",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/8/8b/Anime_Illuso.png/revision/latest?cb=20181210031135"
+        "avatar": "/images/illuso-avatar.png",
+        "image": "/images/illuso.png"
       },
       {
         "id": 5,
         "name": "Melone",
         "stand": "Baby Face",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/a/ad/Anime_Melone.png/revision/latest?cb=20181210031614"
+        "avatar": "/images/melone-avatar.png",
+        "image": "/images/melone.png"
       },
       {
         "id": 6,
         "name": "Pesci",
         "stand": "Beach Boy",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/2/23/Anime_Pesci.png/revision/latest?cb=20181210031104"
+        "avatar": "/images/pesci-avatar.png",
+        "image": "/images/pesci.png"
       },
       {
         "id": 7,
         "name": "Formaggio",
         "stand": "Little Feet",
-        "image": "https://vignette.wikia.nocookie.net/jjba/images/3/36/Formaggio_anime_fullbody.png/revision/latest?cb=20181203034744"
+        "avatar": "/images/formaggio-avatar.png",
+        "image": "/images/formaggio.png"
       }
     ]
   }
